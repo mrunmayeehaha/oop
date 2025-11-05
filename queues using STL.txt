@@ -1,0 +1,18 @@
+#include <iostream>
+#include <list>
+using namespace std;
+
+int main() {
+    list<int> queue;
+    queue.push_back(10);
+    queue.push_back(20);
+    queue.push_back(30);
+
+    cout << "Front element: " << queue.front() << endl;
+
+    queue.pop_front();
+
+    cout << "New front after pop: " << queue.front() << endl;
+
+    return 0;
+}
