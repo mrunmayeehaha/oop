@@ -1,0 +1,29 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int main() {
+    int n = 3, index = 1;
+    vector<int> v(n);  // Allocate space for 3 elements
+
+    cout << "Enter " << n << " elements:\n";
+    for (int i = 0; i < n; ++i)
+        cin >> v[i];
+
+    if (index >= 0 && index < n)//checks index
+        v[index] = 3;
+    else
+        cout << "Index out of range!\n";
+
+    for (int i = 0; i < n; ++i)
+        v[index] *= 2;
+
+    cout << "(";
+    for (int i = 0; i < n; ++i) {
+        cout << v[i];
+        if (i != n - 1) cout << ", "; //if (its not lastno then ,)
+    }
+    cout << ")\n";
+
+    return 0;
+}
